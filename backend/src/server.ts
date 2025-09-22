@@ -11,7 +11,7 @@ app.use('/api/resume', resumeRouter);
 
 const PORT = process.env.PORT || 4000;
 
-initDB().then((db) => {
+initDB().then((db: any) => {
   (app as any).db = db;
 
   app.listen(PORT, () => {
